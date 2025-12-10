@@ -454,25 +454,25 @@ if __name__ == "__main__":
     # These are starting points and should be optimized
     staffing_configs = {
         75: {
-            'SignInTriage': 2,
+            'SignInTriage': 1,
             'Registration': 2,
             'Examination': 3,
-            'Trauma': 2,
+            'Trauma': 3,
             'Treatment': 3
         },
         150: {
-            'SignInTriage': 3,
+            'SignInTriage': 2,
             'Registration': 4,
             'Examination': 6,
-            'Trauma': 3,
+            'Trauma': 4,
             'Treatment': 5
         },
         225: {
             'SignInTriage': 4,
             'Registration': 6,
             'Examination': 9,
-            'Trauma': 4,
-            'Treatment': 8
+            'Trauma': 5,
+            'Treatment': 7
         }
     }
 
