@@ -192,7 +192,7 @@ Service Level Requirements Check:
 
 ================================================================================
 SCENARIO: 225 patients/day, 8% trauma
-Staffing: Triage=4, Registration=6, Exam=9, Trauma=7, Treatment=7
+Staffing: Triage=4, Registration=6, Exam=9, Trauma=6, Treatment=7
 ================================================================================
 
 Results from 30 replications:
@@ -202,14 +202,14 @@ Metric                               Mean   Half-Width   95% CI Lower   95% CI U
 SignInTriage Wait Time (min)         0.00         0.00           0.00           0.00
 Registration Wait Time (min)         0.00         0.00          -0.00           0.00
 Examination Wait Time (min)          0.00         0.00          -0.00           0.01
-Trauma Wait Time (min)               0.00         0.00           0.00           0.00
+Trauma Wait Time (min)               0.01         0.01          -0.01           0.02
 Treatment Wait Time (min)            0.00         0.00          -0.00           0.01
 
 Utilization                   
 SignInTriage Utilization           14.08%        0.71%         13.37%         14.79%
 Registration Utilization           14.66%        0.55%         14.10%         15.21%
 Examination Utilization            31.36%        1.16%         30.20%         32.52%
-Trauma Utilization                 20.25%        2.03%         18.22%         22.27%
+Trauma Utilization                 23.62%        2.37%         21.25%         25.99%
 Treatment Utilization              26.60%        0.99%         25.61%         27.59%
 
 Total Arrivals                      226.2         6.39         219.81         232.59
@@ -223,7 +223,7 @@ Service Level Requirements Check:
 
 ================================================================================
 SCENARIO: 225 patients/day, 10% trauma
-Staffing: Triage=4, Registration=6, Exam=9, Trauma=7, Treatment=7
+Staffing: Triage=4, Registration=6, Exam=9, Trauma=6, Treatment=7
 ================================================================================
 
 Results from 30 replications:
@@ -233,14 +233,14 @@ Metric                               Mean   Half-Width   95% CI Lower   95% CI U
 SignInTriage Wait Time (min)         0.00         0.00           0.00           0.01
 Registration Wait Time (min)         0.00         0.00          -0.00           0.00
 Examination Wait Time (min)          0.02         0.02          -0.00           0.05
-Trauma Wait Time (min)               0.00         0.00           0.00           0.00
+Trauma Wait Time (min)               0.06         0.05           0.01           0.11
 Treatment Wait Time (min)            0.02         0.01           0.01           0.03
 
 Utilization                   
 SignInTriage Utilization           13.97%        0.64%         13.33%         14.60%
 Registration Utilization           13.91%        0.62%         13.29%         14.54%
 Examination Utilization            29.71%        1.30%         28.41%         31.00%
-Trauma Utilization                 23.56%        1.36%         22.20%         24.92%
+Trauma Utilization                 27.48%        1.59%         25.89%         29.07%
 Treatment Utilization              26.63%        1.01%         25.62%         27.64%
 
 Total Arrivals                      229.6         5.08         224.52         234.68
@@ -254,7 +254,7 @@ Service Level Requirements Check:
 
 ================================================================================
 SCENARIO: 225 patients/day, 12% trauma
-Staffing: Triage=4, Registration=6, Exam=9, Trauma=7, Treatment=7
+Staffing: Triage=4, Registration=6, Exam=9, Trauma=6, Treatment=7
 ================================================================================
 
 Results from 30 replications:
@@ -264,15 +264,15 @@ Metric                               Mean   Half-Width   95% CI Lower   95% CI U
 SignInTriage Wait Time (min)         0.00         0.00           0.00           0.01
 Registration Wait Time (min)         0.00         0.00          -0.00           0.00
 Examination Wait Time (min)          0.01         0.02          -0.00           0.03
-Trauma Wait Time (min)               0.37         0.68          -0.31           1.05
-Treatment Wait Time (min)            0.03         0.02           0.01           0.04
+Trauma Wait Time (min)               1.05         1.78          -0.73           2.83
+Treatment Wait Time (min)            0.03         0.02           0.01           0.05
 
 Utilization                   
-SignInTriage Utilization           13.78%        0.57%         13.21%         14.34%
-Registration Utilization           13.55%        0.54%         13.01%         14.08%
-Examination Utilization            28.65%        1.10%         27.55%         29.74%
-Trauma Utilization                 28.38%        3.02%         25.36%         31.40%
-Treatment Utilization              27.59%        1.23%         26.36%         28.82%
+SignInTriage Utilization           13.77%        0.57%         13.20%         14.34%
+Registration Utilization           13.54%        0.54%         13.00%         14.08%
+Examination Utilization            28.63%        1.10%         27.53%         29.73%
+Trauma Utilization                 33.10%        3.52%         29.57%         36.62%
+Treatment Utilization              27.57%        1.23%         26.34%         28.81%
 
 Total Arrivals                      229.8         6.28         223.49         236.04
 
