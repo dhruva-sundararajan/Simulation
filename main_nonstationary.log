@@ -9,12 +9,12 @@ Using staffing configuration for high-load scenario (~220 patients/day):
   Registration: 6
   Examination: 9
   Trauma: 5
-  Treatment: 7
+  Treatment: 8
 
 ================================================================================
 NON-STATIONARY SCENARIO: 8% trauma
 Arrival pattern based on historical data (time-varying rates)
-Staffing: Triage=4, Registration=6, Exam=9, Trauma=5, Treatment=7
+Staffing: Triage=4, Registration=6, Exam=9, Trauma=5, Treatment=8
 ================================================================================
 
 Average arrival rates by hour:
@@ -35,21 +35,21 @@ SignInTriage Wait Time (min)         0.05         0.02           0.02           
 Registration Wait Time (min)         0.01         0.01           0.00           0.02
 Examination Wait Time (min)          0.47         0.14           0.33           0.61
 Trauma Wait Time (min)               2.11         1.76           0.35           3.87
-Treatment Wait Time (min)            0.12         0.05           0.07           0.17
+Treatment Wait Time (min)            0.03         0.01           0.01           0.04
 
 Utilization                   
 SignInTriage Utilization           14.58%        0.75%         13.83%         15.32%
 Registration Utilization           15.07%        0.62%         14.45%         15.69%
 Examination Utilization            32.24%        1.28%         30.96%         33.53%
 Trauma Utilization                 28.48%        3.90%         24.58%         32.38%
-Treatment Utilization              27.33%        1.39%         25.94%         28.72%
+Treatment Utilization              23.91%        1.22%         22.70%         25.13%
 
 Maximum Queue Lengths         
  Max QueueSignInTriage                6.8         0.23           6.57           7.03
  Max QueueRegistration                4.2         0.47           3.70           4.64
  Max QueueExamination                 8.5         0.66           7.84           9.16
  Max QueueTrauma                      4.0         0.56           3.41           4.53
- Max QueueTreatment                   3.1         0.21           2.92           3.35
+ Max QueueTreatment                   2.2         0.17           1.99           2.34
 
 Total Arrivals                      223.0         4.12         218.91         227.16
 
@@ -63,7 +63,7 @@ Service Level Requirements Check:
 ================================================================================
 NON-STATIONARY SCENARIO: 10% trauma
 Arrival pattern based on historical data (time-varying rates)
-Staffing: Triage=4, Registration=6, Exam=9, Trauma=5, Treatment=7
+Staffing: Triage=4, Registration=6, Exam=9, Trauma=5, Treatment=8
 ================================================================================
 
 Average arrival rates by hour:
@@ -84,21 +84,21 @@ SignInTriage Wait Time (min)         0.04         0.02           0.02           
 Registration Wait Time (min)         0.02         0.01           0.01           0.02
 Examination Wait Time (min)          0.61         0.14           0.47           0.74
 Trauma Wait Time (min)               6.44         3.28           3.16           9.72
-Treatment Wait Time (min)            0.15         0.06           0.09           0.21
+Treatment Wait Time (min)            0.03         0.02           0.01           0.05
 
 Utilization                   
 SignInTriage Utilization           15.04%        0.75%         14.29%         15.79%
 Registration Utilization           15.01%        0.71%         14.30%         15.71%
 Examination Utilization            31.93%        1.47%         30.45%         33.40%
 Trauma Utilization                 36.30%        4.57%         31.73%         40.87%
-Treatment Utilization              28.68%        1.40%         27.28%         30.08%
+Treatment Utilization              25.10%        1.23%         23.87%         26.32%
 
 Maximum Queue Lengths         
  Max QueueSignInTriage                7.0         0.00           7.00           7.00
  Max QueueRegistration                6.0         0.07           5.90           6.03
  Max QueueExamination                10.0         0.00          10.00          10.00
  Max QueueTrauma                      5.8         0.16           5.61           5.93
- Max QueueTreatment                   4.4         0.18           4.18           4.55
+ Max QueueTreatment                   3.0         0.00           3.00           3.00
 
 Total Arrivals                      230.1         6.73         223.33         236.80
 
@@ -112,7 +112,7 @@ Service Level Requirements Check:
 ================================================================================
 NON-STATIONARY SCENARIO: 12% trauma
 Arrival pattern based on historical data (time-varying rates)
-Staffing: Triage=4, Registration=6, Exam=9, Trauma=5, Treatment=7
+Staffing: Triage=4, Registration=6, Exam=9, Trauma=5, Treatment=8
 ================================================================================
 
 Average arrival rates by hour:
@@ -133,21 +133,21 @@ SignInTriage Wait Time (min)         0.03         0.01           0.02           
 Registration Wait Time (min)         0.01         0.00           0.00           0.01
 Examination Wait Time (min)          0.48         0.16           0.33           0.64
 Trauma Wait Time (min)              17.11        14.38           2.73          31.49
-Treatment Wait Time (min)            0.12         0.05           0.07           0.16
+Treatment Wait Time (min)            0.02         0.02           0.01           0.04
 
 Utilization                   
 SignInTriage Utilization           14.43%        0.50%         13.93%         14.93%
 Registration Utilization           14.15%        0.48%         13.66%         14.63%
 Examination Utilization            30.39%        1.04%         29.35%         31.43%
 Trauma Utilization                 43.53%        3.96%         39.57%         47.49%
-Treatment Utilization              29.28%        1.21%         28.08%         30.49%
+Treatment Utilization              25.62%        1.05%         24.57%         26.68%
 
 Maximum Queue Lengths         
  Max QueueSignInTriage                7.0         0.00           7.00           7.00
  Max QueueRegistration                6.0         0.00           6.00           6.00
  Max QueueExamination                10.0         0.00          10.00          10.00
  Max QueueTrauma                     12.9         1.03          11.90          13.97
- Max QueueTreatment                   5.0         0.00           5.00           5.00
+ Max QueueTreatment                   3.0         0.00           3.00           3.00
 
 Total Arrivals                      220.8         5.90         214.90         226.70
 
