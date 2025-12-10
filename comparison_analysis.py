@@ -35,8 +35,8 @@ def RunComparisonAnalysis():
             'SignInTriage': 4,
             'Registration': 6,
             'Examination': 9,
-            'Trauma': 4,
-            'Treatment': 8
+            'Trauma': 6,
+            'Treatment': 7
         }
 
         print("Running stationary model...")

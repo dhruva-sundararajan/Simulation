@@ -1,6 +1,6 @@
 ================================================================================
 STATIONARY VS NON-STATIONARY ARRIVAL PROCESS COMPARISON
-Run Date: 2025-12-10 13:20:37
+Run Date: 2025-12-10 13:22:05
 ================================================================================
 
 ================================================================================
@@ -14,7 +14,7 @@ Running stationary model...
 
 ================================================================================
 SCENARIO: 225 patients/day, 10% trauma
-Staffing: Triage=4, Registration=6, Exam=9, Trauma=4, Treatment=8
+Staffing: Triage=4, Registration=6, Exam=9, Trauma=6, Treatment=7
 ================================================================================
 
 Results from 30 replications:
@@ -24,21 +24,21 @@ Metric                               Mean   Half-Width   95% CI Lower   95% CI U
 SignInTriage Wait Time (min)         0.00         0.00           0.00           0.00
 Registration Wait Time (min)         0.00         0.00          -0.00           0.00
 Examination Wait Time (min)          0.01         0.01           0.00           0.02
-Trauma Wait Time (min)               3.76         2.15           1.61           5.91
-Treatment Wait Time (min)            0.01         0.01          -0.00           0.02
+Trauma Wait Time (min)               0.14         0.20          -0.06           0.33
+Treatment Wait Time (min)            0.03         0.03           0.00           0.05
 
 Utilization                   
-SignInTriage Utilization           13.18%        0.70%         12.48%         13.88%
-Registration Utilization           13.28%        0.54%         12.75%         13.82%
-Examination Utilization            28.45%        1.12%         27.33%         29.57%
-Trauma Utilization                 41.73%        4.54%         37.19%         46.26%
-Treatment Utilization              22.83%        1.26%         21.57%         24.09%
+SignInTriage Utilization           13.18%        0.70%         12.49%         13.88%
+Registration Utilization           13.29%        0.54%         12.76%         13.83%
+Examination Utilization            28.47%        1.12%         27.35%         29.59%
+Trauma Utilization                 27.83%        3.02%         24.81%         30.86%
+Treatment Utilization              26.10%        1.44%         24.66%         27.54%
 
 Total Arrivals                      224.3         4.09         220.17         228.36
 
 Service Level Requirements Check:
   Sign-in/Triage (very fast):            PASS
-  Trauma Wait (<5 min):                  FAIL
+  Trauma Wait (<5 min):                  PASS
   Registration (15-20 min acceptable):   PASS
   Examination (15-20 min acceptable):    PASS
   Treatment (15-20 min acceptable):      PASS
@@ -55,7 +55,7 @@ Running non-stationary model...
 ================================================================================
 NON-STATIONARY SCENARIO: 10% trauma
 Arrival pattern based on historical data (time-varying rates)
-Staffing: Triage=4, Registration=6, Exam=9, Trauma=4, Treatment=8
+Staffing: Triage=4, Registration=6, Exam=9, Trauma=6, Treatment=7
 ================================================================================
 
 Average arrival rates by hour:
@@ -75,28 +75,28 @@ Metric                               Mean   Half-Width   95% CI Lower   95% CI U
 SignInTriage Wait Time (min)         0.03         0.01           0.02           0.05
 Registration Wait Time (min)         0.01         0.01           0.01           0.02
 Examination Wait Time (min)          0.57         0.16           0.41           0.72
-Trauma Wait Time (min)              17.15         7.35           9.80          24.50
-Treatment Wait Time (min)            0.04         0.03           0.01           0.08
+Trauma Wait Time (min)               1.65         1.26           0.39           2.90
+Treatment Wait Time (min)            0.19         0.11           0.08           0.30
 
 Utilization                   
-SignInTriage Utilization           14.88%        0.60%         14.27%         15.48%
-Registration Utilization           14.81%        0.51%         14.31%         15.32%
-Examination Utilization            31.50%        0.99%         30.50%         32.49%
-Trauma Utilization                 46.30%        4.10%         42.20%         50.40%
-Treatment Utilization              24.80%        1.07%         23.73%         25.88%
+SignInTriage Utilization           15.04%        0.64%         14.40%         15.69%
+Registration Utilization           14.98%        0.52%         14.46%         15.50%
+Examination Utilization            31.84%        1.01%         30.82%         32.85%
+Trauma Utilization                 31.31%        2.98%         28.33%         34.29%
+Treatment Utilization              28.66%        1.26%         27.40%         29.93%
 
 Maximum Queue Lengths         
  Max QueueSignInTriage                5.9         0.70           5.20           6.60
  Max QueueRegistration                4.7         0.19           4.54           4.93
  Max QueueExamination                 9.7         0.45           9.25          10.15
- Max QueueTrauma                      7.1         0.40           6.73           7.53
- Max QueueTreatment                   3.3         0.26           3.01           3.52
+ Max QueueTrauma                      3.0         0.00           3.00           3.00
+ Max QueueTreatment                   4.8         0.16           4.61           4.93
 
 Total Arrivals                      229.8         6.66         223.18         236.49
 
 Service Level Requirements Check:
   Sign-in/Triage (very fast):            PASS
-  Trauma Wait (<5 min):                  FAIL
+  Trauma Wait (<5 min):                  PASS
   Registration (15-20 min acceptable):   PASS
   Examination (15-20 min acceptable):    PASS
   Treatment (15-20 min acceptable):      PASS
@@ -112,15 +112,15 @@ Station                        Stationary (min)     Non-Stationary (min)
 Sign-in/Triage                               0.00                0.03
 Registration                                 0.00                0.01
 Examination                                  0.01                0.57
-Trauma                                       3.76               17.15
-Treatment                                    0.01                0.04
+Trauma                                       0.14                1.65
+Treatment                                    0.03                0.19
 
 2. UTILIZATION COMPARISON
 --------------------------------------------------------------------------------
 Station                        Stationary (%)       Non-Stationary (%)  
 --------------------------------------------------------------------------------
-Sign-in/Triage                               13.2                14.9
-Registration                                 13.3                14.8
-Examination                                  28.5                31.5
-Trauma                                       41.7                46.3
-Treatment                                    22.8                24.8
+Sign-in/Triage                               13.2                15.0
+Registration                                 13.3                15.0
+Examination                                  28.5                31.8
+Trauma                                       27.8                31.3
+Treatment                                    26.1                28.7
