@@ -479,5 +479,3 @@ if __name__ == "__main__":
     print("\n" + "="*80)
     print("SIMULATION COMPLETE")
     print("="*80)
-    print("\nReview the results above to determine optimal staffing levels.")
-    print("Adjust staffing configurations in the code and re-run as needed.")
