@@ -321,7 +321,7 @@ if __name__ == "__main__":
         'Registration': 6,
         'Examination': 9,
         'Trauma': 5,
-        'Treatment': 7
+        'Treatment': 8
     }
 
     print("\nUsing staffing configuration for high-load scenario (~220 patients/day):")
