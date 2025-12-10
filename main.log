@@ -30,7 +30,7 @@ Total Arrivals                       74.3         2.28          72.05          7
 
 Service Level Requirements Check:
   Sign-in/Triage (very fast):            PASS
-  Trauma Wait (<5 min):                  PASS
+  Trauma Wait (<5 min):                  FAIL
   Registration (15-20 min acceptable):   PASS
   Examination (15-20 min acceptable):    PASS
   Treatment (15-20 min acceptable):      PASS
@@ -61,7 +61,7 @@ Total Arrivals                       77.2         3.67          73.57          8
 
 Service Level Requirements Check:
   Sign-in/Triage (very fast):            PASS
-  Trauma Wait (<5 min):                  PASS
+  Trauma Wait (<5 min):                  FAIL
   Registration (15-20 min acceptable):   PASS
   Examination (15-20 min acceptable):    PASS
   Treatment (15-20 min acceptable):      PASS
@@ -92,7 +92,7 @@ Total Arrivals                       74.8         3.11          71.66          7
 
 Service Level Requirements Check:
   Sign-in/Triage (very fast):            PASS
-  Trauma Wait (<5 min):                  PASS
+  Trauma Wait (<5 min):                  FAIL
   Registration (15-20 min acceptable):   PASS
   Examination (15-20 min acceptable):    PASS
   Treatment (15-20 min acceptable):      PASS
@@ -123,7 +123,7 @@ Total Arrivals                      153.2         4.57         148.66         15
 
 Service Level Requirements Check:
   Sign-in/Triage (very fast):            PASS
-  Trauma Wait (<5 min):                  PASS
+  Trauma Wait (<5 min):                  FAIL
   Registration (15-20 min acceptable):   PASS
   Examination (15-20 min acceptable):    PASS
   Treatment (15-20 min acceptable):      PASS
@@ -154,7 +154,7 @@ Total Arrivals                      152.7         4.91         147.82         15
 
 Service Level Requirements Check:
   Sign-in/Triage (very fast):            PASS
-  Trauma Wait (<5 min):                  PASS
+  Trauma Wait (<5 min):                  FAIL
   Registration (15-20 min acceptable):   PASS
   Examination (15-20 min acceptable):    PASS
   Treatment (15-20 min acceptable):      PASS
@@ -185,7 +185,7 @@ Total Arrivals                      148.8         4.81         144.03         15
 
 Service Level Requirements Check:
   Sign-in/Triage (very fast):            PASS
-  Trauma Wait (<5 min):                  PASS
+  Trauma Wait (<5 min):                  FAIL
   Registration (15-20 min acceptable):   PASS
   Examination (15-20 min acceptable):    PASS
   Treatment (15-20 min acceptable):      PASS
@@ -247,7 +247,7 @@ Total Arrivals                      229.6         5.08         224.52         23
 
 Service Level Requirements Check:
   Sign-in/Triage (very fast):            PASS
-  Trauma Wait (<5 min):                  PASS
+  Trauma Wait (<5 min):                  FAIL
   Registration (15-20 min acceptable):   PASS
   Examination (15-20 min acceptable):    PASS
   Treatment (15-20 min acceptable):      PASS
@@ -278,7 +278,7 @@ Total Arrivals                      229.8         6.28         223.49         23
 
 Service Level Requirements Check:
   Sign-in/Triage (very fast):            PASS
-  Trauma Wait (<5 min):                  PASS
+  Trauma Wait (<5 min):                  FAIL
   Registration (15-20 min acceptable):   PASS
   Examination (15-20 min acceptable):    PASS
   Treatment (15-20 min acceptable):      PASS
@@ -286,6 +286,3 @@ Service Level Requirements Check:
 ================================================================================
 SIMULATION COMPLETE
 ================================================================================
-
-Review the results above to determine optimal staffing levels.
-Adjust staffing configurations in the code and re-run as needed.

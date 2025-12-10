@@ -287,12 +287,21 @@ def RunScenarioNonStationary(trauma_pct, staff_levels, num_replications=30):
     print(f"\n{'Total Arrivals':<30} {mean:>10.1f} {hw:>12.2f} {lower:>14.2f} {upper:>14.2f}")
 
     # Check service level requirements
+    # Unpack CI results for readability
+    tri_mean, tri_hw, tri_lo, tri_hi = ci_results['SignInTriageWait']
+    tra_mean, tra_hw, tra_lo, tra_hi = ci_results['TraumaWait']
+    reg_mean, reg_hw, reg_lo, reg_hi = ci_results['RegistrationWait']
+    ex_mean,  ex_hw,  ex_lo,  ex_hi  = ci_results['ExaminationWait']
+    trt_mean, trt_hw, trt_lo, trt_hi = ci_results['TreatmentWait']
+
     print(f"\n{'Service Level Requirements Check:'}")
-    print(f"{'  Sign-in/Triage (very fast):':<40} {'PASS' if ci_results['SignInTriageWait'][2] < 2 else 'FAIL'}")
-    print(f"{'  Trauma Wait (<5 min):':<40} {'PASS' if ci_results['TraumaWait'][2] < 5 else 'FAIL'}")
-    print(f"{'  Registration (15-20 min acceptable):':<40} {'PASS' if ci_results['RegistrationWait'][0] <= 20 else 'FAIL'}")
-    print(f"{'  Examination (15-20 min acceptable):':<40} {'PASS' if ci_results['ExaminationWait'][0] <= 20 else 'FAIL'}")
-    print(f"{'  Treatment (15-20 min acceptable):':<40} {'PASS' if ci_results['TreatmentWait'][0] <= 20 else 'FAIL'}")
+    # HARD constraints → use UPPER 95% CI bound to ensure requirement with 95% confidence
+    print(f"{'  Sign-in/Triage (very fast):':<40} {'PASS' if tri_hi < 2.0 else 'FAIL'}")
+    print(f"{'  Trauma Wait (<5 min):':<40} {'PASS' if tra_hi < 5.0 else 'FAIL'}")
+    # Other areas: "15–20 minutes acceptable" - use upper CI bound (conservative)
+    print(f"{'  Registration (15-20 min acceptable):':<40} {'PASS' if reg_hi <= 20.0 else 'FAIL'}")
+    print(f"{'  Examination (15-20 min acceptable):':<40} {'PASS' if ex_hi <= 20.0 else 'FAIL'}")
+    print(f"{'  Treatment (15-20 min acceptable):':<40} {'PASS' if trt_hi <= 20.0 else 'FAIL'}")
 
     return ci_results
 

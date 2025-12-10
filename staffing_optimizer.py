@@ -85,23 +85,33 @@ def OptimizeStaffing(load, trauma_pct, num_replications=30):
 
 def CheckServiceLevels(results):
     """
-    Check if service level requirements are met
+    Check if service level requirements are met with 95% confidence
     Returns True if all requirements met, False otherwise
+
+    results[...] is (mean, half_width, lower, upper)
     """
-    # Check Sign-in/Triage (very fast - less than 2 min)
-    if results['SignInTriageWait'][2] >= 2.0:  # Lower CI bound
+    # Unpack CI results
+    tri_mean, tri_hw, tri_lo, tri_hi = results['SignInTriageWait']
+    tra_mean, tra_hw, tra_lo, tra_hi = results['TraumaWait']
+    reg_mean, reg_hw, reg_lo, reg_hi = results['RegistrationWait']
+    ex_mean,  ex_hw,  ex_lo,  ex_hi  = results['ExaminationWait']
+    trt_mean, trt_hw, trt_lo, trt_hi = results['TreatmentWait']
+
+    # Hard constraints: use UPPER CI bound to ensure requirement with 95% confidence
+    # (We need to be 95% confident that the true value is below the threshold)
+    if tri_hi >= 2.0:
         return False
 
-    # Check Trauma (less than 5 min average)
-    if results['TraumaWait'][2] >= 5.0:  # Lower CI bound
+    if tra_hi >= 5.0:
         return False
 
-    # Check other stations (15-20 min acceptable)
-    if results['RegistrationWait'][0] > 20.0:  # Mean
+    # 15–20 minute "acceptable" constraints
+    # Conservative version: use upper CI here too
+    if reg_hi > 20.0:
         return False
-    if results['ExaminationWait'][0] > 20.0:  # Mean
+    if ex_hi > 20.0:
         return False
-    if results['TreatmentWait'][0] > 20.0:  # Mean
+    if trt_hi > 20.0:
         return False
 
     return True

@@ -1,0 +1,196 @@
+
+================================================================================
+OPTIMIZING STAFFING FOR 75 patients/day, 10% trauma
+================================================================================
+
+Testing baseline configuration (Total Staff: 12)...
+
+================================================================================
+SCENARIO: 75 patients/day, 10% trauma
+Staffing: Triage=2, Registration=2, Exam=3, Trauma=2, Treatment=3
+================================================================================
+
+Results from 30 replications:
+
+Metric                               Mean   Half-Width   95% CI Lower   95% CI Upper
+--------------------------------------------------------------------------------
+SignInTriage Wait Time (min)         0.03         0.01           0.02           0.05
+Registration Wait Time (min)         0.09         0.04           0.05           0.13
+Examination Wait Time (min)          0.32         0.11           0.21           0.44
+Trauma Wait Time (min)               7.55         6.82           0.74          14.37
+Treatment Wait Time (min)            0.06         0.04           0.02           0.10
+
+Utilization                   
+SignInTriage Utilization            9.64%        0.58%          9.06%         10.22%
+Registration Utilization           14.47%        0.56%         13.91%         15.04%
+Examination Utilization            30.82%        1.15%         29.67%         31.97%
+Trauma Utilization                 26.59%        5.36%         21.23%         31.95%
+Treatment Utilization              21.05%        1.07%         19.99%         22.12%
+
+Total Arrivals                       74.3         2.28          72.05          76.61
+
+Service Level Requirements Check:
+  Sign-in/Triage (very fast):            PASS
+  Trauma Wait (<5 min):                  FAIL
+  Registration (15-20 min acceptable):   PASS
+  Examination (15-20 min acceptable):    PASS
+  Treatment (15-20 min acceptable):      PASS
+WARNING: Baseline configuration does not meet service requirements!
+
+================================================================================
+OPTIMIZING STAFFING FOR 150 patients/day, 10% trauma
+================================================================================
+
+Testing baseline configuration (Total Staff: 21)...
+
+================================================================================
+SCENARIO: 150 patients/day, 10% trauma
+Staffing: Triage=3, Registration=4, Exam=6, Trauma=3, Treatment=5
+================================================================================
+
+Results from 30 replications:
+
+Metric                               Mean   Half-Width   95% CI Lower   95% CI Upper
+--------------------------------------------------------------------------------
+SignInTriage Wait Time (min)         0.01         0.01           0.00           0.02
+Registration Wait Time (min)         0.00         0.00           0.00           0.01
+Examination Wait Time (min)          0.05         0.03           0.03           0.08
+Trauma Wait Time (min)               4.90         2.84           2.06           7.74
+Treatment Wait Time (min)            0.08         0.07           0.01           0.15
+
+Utilization                   
+SignInTriage Utilization           11.78%        0.63%         11.15%         12.41%
+Registration Utilization           13.45%        0.65%         12.79%         14.10%
+Examination Utilization            28.90%        1.46%         27.45%         30.36%
+Trauma Utilization                 39.24%        4.45%         34.80%         43.69%
+Treatment Utilization              25.20%        1.59%         23.61%         26.79%
+
+Total Arrivals                      150.9         3.32         147.58         154.22
+
+Service Level Requirements Check:
+  Sign-in/Triage (very fast):            PASS
+  Trauma Wait (<5 min):                  FAIL
+  Registration (15-20 min acceptable):   PASS
+  Examination (15-20 min acceptable):    PASS
+  Treatment (15-20 min acceptable):      PASS
+WARNING: Baseline configuration does not meet service requirements!
+
+================================================================================
+OPTIMIZING STAFFING FOR 225 patients/day, 10% trauma
+================================================================================
+
+Testing baseline configuration (Total Staff: 31)...
+
+================================================================================
+SCENARIO: 225 patients/day, 10% trauma
+Staffing: Triage=4, Registration=6, Exam=9, Trauma=4, Treatment=8
+================================================================================
+
+Results from 30 replications:
+
+Metric                               Mean   Half-Width   95% CI Lower   95% CI Upper
+--------------------------------------------------------------------------------
+SignInTriage Wait Time (min)         0.01         0.00           0.00           0.01
+Registration Wait Time (min)         0.00         0.00          -0.00           0.00
+Examination Wait Time (min)          0.01         0.01           0.00           0.02
+Trauma Wait Time (min)               7.65         4.71           2.94          12.35
+Treatment Wait Time (min)            0.00         0.00          -0.00           0.01
+
+Utilization                   
+SignInTriage Utilization           13.90%        0.61%         13.29%         14.51%
+Registration Utilization           13.81%        0.53%         13.28%         14.34%
+Examination Utilization            29.38%        1.06%         28.32%         30.44%
+Trauma Utilization                 43.42%        4.13%         39.29%         47.55%
+Treatment Utilization              23.19%        1.08%         22.11%         24.27%
+
+Total Arrivals                      230.5         5.92         224.61         236.46
+
+Service Level Requirements Check:
+  Sign-in/Triage (very fast):            PASS
+  Trauma Wait (<5 min):                  FAIL
+  Registration (15-20 min acceptable):   PASS
+  Examination (15-20 min acceptable):    PASS
+  Treatment (15-20 min acceptable):      PASS
+WARNING: Baseline configuration does not meet service requirements!
+
+================================================================================
+OPTIMIZING STAFFING FOR 225 patients/day, 12% trauma
+================================================================================
+
+Testing baseline configuration (Total Staff: 31)...
+
+================================================================================
+SCENARIO: 225 patients/day, 12% trauma
+Staffing: Triage=4, Registration=6, Exam=9, Trauma=4, Treatment=8
+================================================================================
+
+Results from 30 replications:
+
+Metric                               Mean   Half-Width   95% CI Lower   95% CI Upper
+--------------------------------------------------------------------------------
+SignInTriage Wait Time (min)         0.00         0.00           0.00           0.00
+Registration Wait Time (min)         0.00         0.00          -0.00           0.00
+Examination Wait Time (min)          0.01         0.01          -0.00           0.01
+Trauma Wait Time (min)               8.20         5.17           3.03          13.38
+Treatment Wait Time (min)            0.00         0.00          -0.00           0.00
+
+Utilization                   
+SignInTriage Utilization           13.39%        0.58%         12.81%         13.97%
+Registration Utilization           13.12%        0.55%         12.58%         13.67%
+Examination Utilization            28.18%        1.11%         27.07%         29.28%
+Trauma Utilization                 48.20%        4.08%         44.11%         52.28%
+Treatment Utilization              23.71%        0.93%         22.78%         24.64%
+
+Total Arrivals                      223.5         5.63         217.84         229.09
+
+Service Level Requirements Check:
+  Sign-in/Triage (very fast):            PASS
+  Trauma Wait (<5 min):                  FAIL
+  Registration (15-20 min acceptable):   PASS
+  Examination (15-20 min acceptable):    PASS
+  Treatment (15-20 min acceptable):      PASS
+WARNING: Baseline configuration does not meet service requirements!
+
+
+================================================================================
+OPTIMIZATION COMPLETE - SUMMARY OF OPTIMAL STAFFING
+================================================================================
+
+75 patients/day, 10% trauma (Total: 12 staff):
+  SignInTriage: 2
+  Registration: 2
+  Examination: 3
+  Trauma: 2
+  Treatment: 3
+
+150 patients/day, 10% trauma (Total: 21 staff):
+  SignInTriage: 3
+  Registration: 4
+  Examination: 6
+  Trauma: 3
+  Treatment: 5
+
+225 patients/day, 10% trauma (Total: 31 staff):
+  SignInTriage: 4
+  Registration: 6
+  Examination: 9
+  Trauma: 4
+  Treatment: 8
+
+225 patients/day, 12% trauma (Total: 31 staff):
+  SignInTriage: 4
+  Registration: 6
+  Examination: 9
+  Trauma: 4
+  Treatment: 8
+
+================================================================================
+RELAXED SERVICE LEVEL ANALYSIS
+================================================================================
+
+Testing with relaxed requirements:
+  - Sign-in/Triage: < 5 minutes (was 'very fast')
+  - Trauma: < 8 minutes (was < 5 minutes)
+  - Others: 20-25 minutes acceptable (was 15-20 minutes)
+
+(Implementation requires modifying CheckServiceLevels function)

@@ -1,0 +1,126 @@
+================================================================================
+STATIONARY VS NON-STATIONARY ARRIVAL PROCESS COMPARISON
+Run Date: 2025-12-10 12:56:52
+================================================================================
+
+================================================================================
+PART 1: STATIONARY POISSON PROCESS (Base Model)
+================================================================================
+
+Assumption: Constant arrival rate throughout 18-hour operating period
+Testing 225 patients/day with 10% trauma
+
+Running stationary model...
+
+================================================================================
+SCENARIO: 225 patients/day, 10% trauma
+Staffing: Triage=4, Registration=6, Exam=9, Trauma=4, Treatment=8
+================================================================================
+
+Results from 30 replications:
+
+Metric                               Mean   Half-Width   95% CI Lower   95% CI Upper
+--------------------------------------------------------------------------------
+SignInTriage Wait Time (min)         0.00         0.00           0.00           0.00
+Registration Wait Time (min)         0.00         0.00          -0.00           0.00
+Examination Wait Time (min)          0.01         0.01           0.00           0.02
+Trauma Wait Time (min)               3.76         2.15           1.61           5.91
+Treatment Wait Time (min)            0.01         0.01          -0.00           0.02
+
+Utilization                   
+SignInTriage Utilization           13.18%        0.70%         12.48%         13.88%
+Registration Utilization           13.28%        0.54%         12.75%         13.82%
+Examination Utilization            28.45%        1.12%         27.33%         29.57%
+Trauma Utilization                 41.73%        4.54%         37.19%         46.26%
+Treatment Utilization              22.83%        1.26%         21.57%         24.09%
+
+Total Arrivals                      224.3         4.09         220.17         228.36
+
+Service Level Requirements Check:
+  Sign-in/Triage (very fast):            PASS
+  Trauma Wait (<5 min):                  FAIL
+  Registration (15-20 min acceptable):   PASS
+  Examination (15-20 min acceptable):    PASS
+  Treatment (15-20 min acceptable):      PASS
+
+================================================================================
+PART 2: NON-STATIONARY POISSON PROCESS (Extra Credit)
+================================================================================
+
+Assumption: Time-varying arrival rate based on historical data
+Average ~227 patients/day with 10% trauma
+
+Running non-stationary model...
+
+================================================================================
+NON-STATIONARY SCENARIO: 10% trauma
+Arrival pattern based on historical data (time-varying rates)
+Staffing: Triage=4, Registration=6, Exam=9, Trauma=4, Treatment=8
+================================================================================
+
+Average arrival rates by hour:
+  6-7AM: 2.4 patients/hour  7-8AM: 2.8 patients/hour  8-9AM: 8.8 patients/hour
+  9-10AM: 10.4 patients/hour  10-11AM: 14.8 patients/hour  11AM-12PM: 26.3 patients/hour
+  12-1PM: 31.4 patients/hour  1-2PM: 18.1 patients/hour  2-3PM: 16.5 patients/hour
+  3-4PM: 12.0 patients/hour  4-5PM: 11.6 patients/hour  5-6PM: 28.9 patients/hour
+  6-7PM: 18.0 patients/hour  7-8PM: 11.5 patients/hour  8-9PM: 5.3 patients/hour
+  9-10PM: 4.1 patients/hour  10-11PM: 2.2 patients/hour  11PM-12AM: 2.1 patients/hour
+
+Total expected arrivals per day: 227.1 patients
+
+Results from 30 replications:
+
+Metric                               Mean   Half-Width   95% CI Lower   95% CI Upper
+--------------------------------------------------------------------------------
+SignInTriage Wait Time (min)         0.03         0.01           0.02           0.05
+Registration Wait Time (min)         0.01         0.01           0.01           0.02
+Examination Wait Time (min)          0.57         0.16           0.41           0.72
+Trauma Wait Time (min)              17.15         7.35           9.80          24.50
+Treatment Wait Time (min)            0.04         0.03           0.01           0.08
+
+Utilization                   
+SignInTriage Utilization           14.88%        0.60%         14.27%         15.48%
+Registration Utilization           14.81%        0.51%         14.31%         15.32%
+Examination Utilization            31.50%        0.99%         30.50%         32.49%
+Trauma Utilization                 46.30%        4.10%         42.20%         50.40%
+Treatment Utilization              24.80%        1.07%         23.73%         25.88%
+
+Maximum Queue Lengths         
+ Max QueueSignInTriage                5.9         0.70           5.20           6.60
+ Max QueueRegistration                4.7         0.19           4.54           4.93
+ Max QueueExamination                 9.7         0.45           9.25          10.15
+ Max QueueTrauma                      7.1         0.40           6.73           7.53
+ Max QueueTreatment                   3.3         0.26           3.01           3.52
+
+Total Arrivals                      229.8         6.66         223.18         236.49
+
+Service Level Requirements Check:
+  Sign-in/Triage (very fast):            PASS
+  Trauma Wait (<5 min):                  FAIL
+  Registration (15-20 min acceptable):   PASS
+  Examination (15-20 min acceptable):    PASS
+  Treatment (15-20 min acceptable):      PASS
+
+================================================================================
+PART 3: COMPARISON AND ANALYSIS
+================================================================================
+
+1. AVERAGE WAIT TIMES COMPARISON
+--------------------------------------------------------------------------------
+Station                        Stationary (min)     Non-Stationary (min)
+--------------------------------------------------------------------------------
+Sign-in/Triage                               0.00                0.03
+Registration                                 0.00                0.01
+Examination                                  0.01                0.57
+Trauma                                       3.76               17.15
+Treatment                                    0.01                0.04
+
+2. UTILIZATION COMPARISON
+--------------------------------------------------------------------------------
+Station                        Stationary (%)       Non-Stationary (%)  
+--------------------------------------------------------------------------------
+Sign-in/Triage                               13.2                14.9
+Registration                                 13.3                14.8
+Examination                                  28.5                31.5
+Trauma                                       41.7                46.3
+Treatment                                    22.8                24.8
