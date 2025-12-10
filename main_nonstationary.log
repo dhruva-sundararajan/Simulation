@@ -8,13 +8,13 @@ Using staffing configuration for high-load scenario (~220 patients/day):
   SignInTriage: 4
   Registration: 6
   Examination: 9
-  Trauma: 4
-  Treatment: 8
+  Trauma: 5
+  Treatment: 7
 
 ================================================================================
 NON-STATIONARY SCENARIO: 8% trauma
 Arrival pattern based on historical data (time-varying rates)
-Staffing: Triage=4, Registration=6, Exam=9, Trauma=4, Treatment=8
+Staffing: Triage=4, Registration=6, Exam=9, Trauma=5, Treatment=7
 ================================================================================
 
 Average arrival rates by hour:
@@ -34,22 +34,22 @@ Metric                               Mean   Half-Width   95% CI Lower   95% CI U
 SignInTriage Wait Time (min)         0.05         0.02           0.02           0.07
 Registration Wait Time (min)         0.01         0.01           0.00           0.02
 Examination Wait Time (min)          0.47         0.14           0.33           0.61
-Trauma Wait Time (min)               8.37         5.42           2.96          13.79
-Treatment Wait Time (min)            0.05         0.03           0.01           0.08
+Trauma Wait Time (min)               2.11         1.76           0.35           3.87
+Treatment Wait Time (min)            0.12         0.05           0.07           0.17
 
 Utilization                   
-SignInTriage Utilization           14.57%        0.74%         13.82%         15.31%
-Registration Utilization           15.06%        0.62%         14.44%         15.68%
-Examination Utilization            32.22%        1.28%         30.95%         33.50%
-Trauma Utilization                 35.56%        4.83%         30.73%         40.39%
-Treatment Utilization              23.90%        1.21%         22.69%         25.10%
+SignInTriage Utilization           14.58%        0.75%         13.83%         15.32%
+Registration Utilization           15.07%        0.62%         14.45%         15.69%
+Examination Utilization            32.24%        1.28%         30.96%         33.53%
+Trauma Utilization                 28.48%        3.90%         24.58%         32.38%
+Treatment Utilization              27.33%        1.39%         25.94%         28.72%
 
 Maximum Queue Lengths         
  Max QueueSignInTriage                6.8         0.23           6.57           7.03
  Max QueueRegistration                4.2         0.47           3.70           4.64
  Max QueueExamination                 8.5         0.66           7.84           9.16
- Max QueueTrauma                      5.0         0.52           4.51           5.56
- Max QueueTreatment                   2.7         0.20           2.46           2.87
+ Max QueueTrauma                      4.0         0.56           3.41           4.53
+ Max QueueTreatment                   3.1         0.21           2.92           3.35
 
 Total Arrivals                      223.0         4.12         218.91         227.16
 
@@ -63,7 +63,7 @@ Service Level Requirements Check:
 ================================================================================
 NON-STATIONARY SCENARIO: 10% trauma
 Arrival pattern based on historical data (time-varying rates)
-Staffing: Triage=4, Registration=6, Exam=9, Trauma=4, Treatment=8
+Staffing: Triage=4, Registration=6, Exam=9, Trauma=5, Treatment=7
 ================================================================================
 
 Average arrival rates by hour:
@@ -83,22 +83,22 @@ Metric                               Mean   Half-Width   95% CI Lower   95% CI U
 SignInTriage Wait Time (min)         0.04         0.02           0.02           0.06
 Registration Wait Time (min)         0.02         0.01           0.01           0.02
 Examination Wait Time (min)          0.61         0.14           0.47           0.74
-Trauma Wait Time (min)              18.72         8.96           9.76          27.68
-Treatment Wait Time (min)            0.04         0.03           0.01           0.06
+Trauma Wait Time (min)               6.44         3.28           3.16           9.72
+Treatment Wait Time (min)            0.15         0.06           0.09           0.21
 
 Utilization                   
-SignInTriage Utilization           14.97%        0.76%         14.21%         15.73%
-Registration Utilization           14.94%        0.72%         14.22%         15.65%
-Examination Utilization            31.78%        1.48%         30.29%         33.26%
-Trauma Utilization                 45.03%        5.47%         39.56%         50.50%
-Treatment Utilization              24.97%        1.21%         23.76%         26.18%
+SignInTriage Utilization           15.04%        0.75%         14.29%         15.79%
+Registration Utilization           15.01%        0.71%         14.30%         15.71%
+Examination Utilization            31.93%        1.47%         30.45%         33.40%
+Trauma Utilization                 36.30%        4.57%         31.73%         40.87%
+Treatment Utilization              28.68%        1.40%         27.28%         30.08%
 
 Maximum Queue Lengths         
  Max QueueSignInTriage                7.0         0.00           7.00           7.00
  Max QueueRegistration                6.0         0.07           5.90           6.03
  Max QueueExamination                10.0         0.00          10.00          10.00
- Max QueueTrauma                      9.8         0.80           9.03          10.64
- Max QueueTreatment                   3.8         0.16           3.61           3.93
+ Max QueueTrauma                      5.8         0.16           5.61           5.93
+ Max QueueTreatment                   4.4         0.18           4.18           4.55
 
 Total Arrivals                      230.1         6.73         223.33         236.80
 
@@ -112,7 +112,7 @@ Service Level Requirements Check:
 ================================================================================
 NON-STATIONARY SCENARIO: 12% trauma
 Arrival pattern based on historical data (time-varying rates)
-Staffing: Triage=4, Registration=6, Exam=9, Trauma=4, Treatment=8
+Staffing: Triage=4, Registration=6, Exam=9, Trauma=5, Treatment=7
 ================================================================================
 
 Average arrival rates by hour:
@@ -132,22 +132,22 @@ Metric                               Mean   Half-Width   95% CI Lower   95% CI U
 SignInTriage Wait Time (min)         0.03         0.01           0.02           0.04
 Registration Wait Time (min)         0.01         0.00           0.00           0.01
 Examination Wait Time (min)          0.48         0.16           0.33           0.64
-Trauma Wait Time (min)              40.30        25.17          15.13          65.47
-Treatment Wait Time (min)            0.02         0.03          -0.00           0.05
+Trauma Wait Time (min)              17.11        14.38           2.73          31.49
+Treatment Wait Time (min)            0.12         0.05           0.07           0.16
 
 Utilization                   
-SignInTriage Utilization           14.16%        0.52%         13.65%         14.68%
-Registration Utilization           13.90%        0.53%         13.36%         14.43%
-Examination Utilization            29.85%        1.15%         28.70%         31.00%
-Trauma Utilization                 53.01%        4.03%         48.97%         57.04%
-Treatment Utilization              25.12%        0.97%         24.15%         26.10%
+SignInTriage Utilization           14.43%        0.50%         13.93%         14.93%
+Registration Utilization           14.15%        0.48%         13.66%         14.63%
+Examination Utilization            30.39%        1.04%         29.35%         31.43%
+Trauma Utilization                 43.53%        3.96%         39.57%         47.49%
+Treatment Utilization              29.28%        1.21%         28.08%         30.49%
 
 Maximum Queue Lengths         
  Max QueueSignInTriage                7.0         0.00           7.00           7.00
  Max QueueRegistration                6.0         0.00           6.00           6.00
  Max QueueExamination                10.0         0.00          10.00          10.00
- Max QueueTrauma                     17.1         0.90          16.16          17.97
- Max QueueTreatment                   4.0         0.00           4.00           4.00
+ Max QueueTrauma                     12.9         1.03          11.90          13.97
+ Max QueueTreatment                   5.0         0.00           5.00           5.00
 
 Total Arrivals                      220.8         5.90         214.90         226.70
 
@@ -161,18 +161,3 @@ Service Level Requirements Check:
 ================================================================================
 NON-STATIONARY SIMULATION COMPLETE
 ================================================================================
-
-================================================================================
-COMPARISON WITH STATIONARY PROCESS
-================================================================================
-
-Key Insights:
-1. Non-stationary model captures realistic time-varying arrival patterns
-2. Peak hours (11AM-12PM, 5PM-6PM) show much higher arrival rates
-3. Maximum queue lengths provide insight into worst-case scenarios
-4. Staffing needs may vary by time of day (not modeled here)
-
-Recommendations for non-stationary model:
-- Consider shift scheduling to match peak demand periods
-- Monitor maximum queue lengths during peak hours
-- May need additional staff during 11AM-1PM and 5PM-7PM periods
