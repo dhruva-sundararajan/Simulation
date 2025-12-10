@@ -320,7 +320,7 @@ if __name__ == "__main__":
         'SignInTriage': 4,
         'Registration': 6,
         'Examination': 9,
-        'Trauma': 6,
+        'Trauma': 7,
         'Treatment': 7
     }
 
