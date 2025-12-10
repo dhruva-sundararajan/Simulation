@@ -24,7 +24,7 @@ def OptimizeStaffing(load, trauma_pct, num_replications=30):
             'SignInTriage': 2,
             'Registration': 2,
             'Examination': 3,
-            'Trauma': 2,
+            'Trauma': 3,
             'Treatment': 3
         }
     elif load == 150:
@@ -32,7 +32,7 @@ def OptimizeStaffing(load, trauma_pct, num_replications=30):
             'SignInTriage': 3,
             'Registration': 4,
             'Examination': 6,
-            'Trauma': 3,
+            'Trauma': 4,
             'Treatment': 5
         }
     else:  # 225
@@ -40,7 +40,7 @@ def OptimizeStaffing(load, trauma_pct, num_replications=30):
             'SignInTriage': 4,
             'Registration': 6,
             'Examination': 9,
-            'Trauma': 4,
+            'Trauma': 5,
             'Treatment': 8
         }
 
