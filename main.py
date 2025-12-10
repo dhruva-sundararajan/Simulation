@@ -457,7 +457,7 @@ if __name__ == "__main__":
             'SignInTriage': 1,
             'Registration': 2,
             'Examination': 3,
-            'Trauma': 3,
+            'Trauma': 4,
             'Treatment': 3
         },
         150: {
@@ -471,7 +471,7 @@ if __name__ == "__main__":
             'SignInTriage': 4,
             'Registration': 6,
             'Examination': 9,
-            'Trauma': 5,
+            'Trauma': 7,
             'Treatment': 7
         }
     }
